@@ -33,7 +33,7 @@ header h1 {
     display: inline;
     margin: 0 auto;
 }
-.top > i {
+.top > svg {
     font-size: 2em;
     margin: 0 auto;
     cursor: pointer;
@@ -63,7 +63,7 @@ nav.open {
     width: 10vw;
     height: 10vh;
 }
-nav .navCloseContainer i {
+nav .navCloseContainer svg {
     font-size: 2em;
     cursor: pointer;
 }
