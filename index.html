@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Siege of Corinth</title>
+        <link rel="shortcut icon" href="americaFlag.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <i class="ion-navicon-round" id="open-nav"></i>
+                <h1>Siege of Corinth</h1>
+            </div>
+            <nav>
+                <div class="navCloseContainer">
+                    <i class="ion-close-round" id="close-nav"></i>
+                </div>
+                <ul>
+                    <li id="openLeaders">Leaders</li>
+                    <li id="openTroops">Troops</li>
+                    <li id="openTimeline">Timeline</li>
+                    <li id="openBibliography">Bibliography</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="leaders">
+                <h2>Leaders</h2>
+                <div class="container containerLeaders">
+                    <div id="unionLeaders">
+                        <h3>Union</h3>
+                        <div class="table">
+                            <div class="tableHead">Leader</div>
+                            <div class="tableHead">Commanding</div>
+                            <div class="tableHead">Troops led</div>
+                            <div class="odd">Henry Halleck</div>
+                            <div class="odd"><i class="ion-checkmark-round"></i></div>
+                            <div class="odd"></div>
+                            <div class="even">Ulysses S. Grant</div>
+                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="even"></div>
+                            <div class="odd">George H. Thomas</div>
+                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="odd">Army of the Tennesse</div>
+                            <div class="even">Don Carlos Buell</div>
+                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="even">Army of the Ohio</div>
+                            <div class="odd">John Pope</div>
+                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="odd">Army of the Mississippi</div>
+                        </div>
+                    </div>
+                    <div id="confederateLeaders">
+                        <h3>Confederate</h3>
+                        <div class="table">
+                            <div class="tableHead">Leader</div>
+                            <div class="tableHead">Commanding</div>
+                            <div class="tableHead">Troops led</div>
+                            <div class="odd">P. G. T. Bearuregard</div>
+                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="odd"></div>
+                            <div class="even">Braxton Bragg</div>
+                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="even">II Corps</div>
+                            <div class="odd">Earl Van Dorn</div>
+                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="odd"></div>
+                            <div class="even">Leonidas Polk</div>
+                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="even">I Corps</div>
+                            <div class="odd">William J. Hardee</div>
+                            <div class="odd"><i class="ion-checkmark-round"></i></div>
+                            <div class="odd">III Corps</div>
+                            <div class="even">John C. Breckinridge</div>
+                            <div class="even"><i class="ion-checkmark-round"></i></div>
+                            <div class="even">Reserve Corps</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="troops">
+                <h2>Troops</h2>
+                <div class="container containerTroops">
+                    <div id="unionTroops">
+                        <h3>Union</h3>
+                        <div class="list">
+                            <div class="odd">Army of Tennessee</div>
+                            <div class="even">Army of Ohio</div>
+                            <div class="odd">Army of the Mississippi</div>
+                        </div>
+                    </div>
+                    <div id="confederateTroops">
+                        <h3>Confederate</h3>
+                        <div class="list">
+                            <div class="odd">Army of Mississippi</div>
+                            <div class="even">Army of the West</div>
+                        </div>
+                    </div>
+                    <div id="comparison">
+                        <h3>Comparison</h3>
+                        <div id="charts">
+                            <canvas id="troopsChart" style="max-width: 512px"></canvas>
+                            <canvas id="casualtiesChart" style="max-width: 512px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="timeline" class="pt1">
+                <h2>Timeline</h2>
+                <div id="line">
+                    <svg width="20px" height="255vh" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="5" cy="42.5vh" r="5" fill="#8080ff" />
+                        <circle cx="5" cy="127.5vh" r="5" fill="#8080ff" />
+                        <circle cx="5" cy="212.5vh" r="5" fill="#8080ff" />
+                        <line x1="5" y1="42.5vh" x2="5" y2="212.5vh" stroke="#8080ff" stroke-width="3" />
+                    </svg>
+                </div>
+                <div class="TimelinePart1">
+                    <h3>4/29/1862</h3>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineDown tpt2 timelineArrow">
+                        <polygon points="2,2 38,2 20,18" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                </div>
+                <div class="TimelinePart2">
+                    <h3>5/3/1862</h3>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt1 timelineArrow">
+                        <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineDown tpt3 timelineArrow">
+                        <polygon points="2,2 38,2 20,18" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                </div>
+                <div class="TimelinePart3">
+                    <h3>5/28/1862</h3>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt2 timelineArrow">
+                        <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                </div>
+            </section>
+            <section id="bibliography">
+                <h2>Works Cited</h2>
+                <ul>
+                    <li>"Siege of Corinth." American Battlefield Trust, <a href="https://www.battlefields.org/learn/civil-war/battles/siege-corinth">https://www.battlefields.org/learn/civil-war/battles/siege-corinth</a>. Accessed 30 May 2025.</li>
+                    <li>Searles, Harry. "Corinth Siege Facts." American History Central, American History Central, 6 Jan. 2025, <a href="https://www.americanhistorycentral.com/entries/siege-of-corinth-facts/">https://www.americanhistorycentral.com/entries/siege-of-corinth-facts/</a>.</li>
+                    <li>American Civil War High Command, <a href="https://americancivilwarhighcommand.com/">https://americancivilwarhighcommand.com/</a>. Accessed 6 June 2025. </li>
+                </ul>
+            </section>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
