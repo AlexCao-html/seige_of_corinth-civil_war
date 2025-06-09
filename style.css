@@ -115,7 +115,6 @@ main h2, main h3 {
 .table * {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 3em;
     flex-wrap: wrap;
 }
