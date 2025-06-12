@@ -12,32 +12,69 @@ document.querySelector("#close-nav").addEventListener("click", () => {
         sections[i].classList.remove("openNav");
     }
 });
+document.querySelector("#openOverview").addEventListener("click", () => {
+    document.querySelector("#openOverview").classList.add("opened");
+    document.querySelector("#openLeaders").classList.remove("opened");
+    document.querySelector("#openTroops").classList.remove("opened");
+    document.querySelector("#openTimeline").classList.remove("opened");
+    document.querySelector("#openBibliography").classList.remove("opened");
+    document.querySelector("#overview").classList.add("open");
+    document.querySelector("#leaders").classList.remove("open");
+    document.querySelector("#troops").classList.remove("open");
+    document.querySelector("#timeline").classList.remove("open");
+    document.querySelector("#bibliography").classList.remove("open");
+    document.querySelector("html").classList.remove("noYscroll");
+});
 document.querySelector("#openLeaders").addEventListener("click", () => {
-    document.querySelector("#leaders").classList.toggle("open");
+    document.querySelector("#openOverview").classList.remove("opened");
+    document.querySelector("#openLeaders").classList.add("opened");
+    document.querySelector("#openTroops").classList.remove("opened");
+    document.querySelector("#openTimeline").classList.remove("opened");
+    document.querySelector("#openBibliography").classList.remove("opened");
+    document.querySelector("#overview").classList.remove("open");
+    document.querySelector("#leaders").classList.add("open");
     document.querySelector("#troops").classList.remove("open");
     document.querySelector("#timeline").classList.remove("open");
     document.querySelector("#bibliography").classList.remove("open");
     document.querySelector("html").classList.remove("noYscroll");
 });
 document.querySelector("#openTroops").addEventListener("click", () => {
+    document.querySelector("#openOverview").classList.remove("opened");
+    document.querySelector("#openLeaders").classList.remove("opened");
+    document.querySelector("#openTroops").classList.add("opened");
+    document.querySelector("#openTimeline").classList.remove("opened");
+    document.querySelector("#openBibliography").classList.remove("opened");
+    document.querySelector("#overview").classList.remove("open");
     document.querySelector("#leaders").classList.remove("open");
-    document.querySelector("#troops").classList.toggle("open");
+    document.querySelector("#troops").classList.add("open");
     document.querySelector("#timeline").classList.remove("open");
     document.querySelector("#bibliography").classList.remove("open");
     document.querySelector("html").classList.remove("noYscroll");
 });
 document.querySelector("#openTimeline").addEventListener("click", () => {
+    document.querySelector("#openOverview").classList.remove("opened");
+    document.querySelector("#openLeaders").classList.remove("opened");
+    document.querySelector("#openTroops").classList.remove("opened");
+    document.querySelector("#openTimeline").classList.add("opened");
+    document.querySelector("#openBibliography").classList.remove("opened");
+    document.querySelector("#overview").classList.remove("open");
     document.querySelector("#leaders").classList.remove("open");
     document.querySelector("#troops").classList.remove("open");
-    document.querySelector("#timeline").classList.toggle("open");
+    document.querySelector("#timeline").classList.add("open");
     document.querySelector("#bibliography").classList.remove("open");
     document.querySelector("html").classList.add("noYscroll");
 });
 document.querySelector("#openBibliography").addEventListener("click", () => {
+    document.querySelector("#openOverview").classList.remove("opened");
+    document.querySelector("#openLeaders").classList.remove("opened");
+    document.querySelector("#openTroops").classList.remove("opened");
+    document.querySelector("#openTimeline").classList.remove("opened");
+    document.querySelector("#openBibliography").classList.add("opened");
+    document.querySelector("#overview").classList.remove("open");
     document.querySelector("#leaders").classList.remove("open");
     document.querySelector("#troops").classList.remove("open");
     document.querySelector("#timeline").classList.remove("open");
-    document.querySelector("#bibliography").classList.toggle("open");
+    document.querySelector("#bibliography").classList.add("open");
     document.querySelector("html").classList.remove("noYscroll");
 });
 var tpt1 = document.querySelectorAll(".tpt1");
@@ -46,6 +83,8 @@ for (var i = 0; i < tpt1.length; i++) {
         document.querySelector("#timeline").classList.add("pt1");
         document.querySelector("#timeline").classList.remove("pt2");
         document.querySelector("#timeline").classList.remove("pt3");
+        document.querySelector("#timeline").classList.remove("pt4");
+        document.querySelector("#timeline").classList.remove("pt5");
     });
 }
 var tpt2 = document.querySelectorAll(".tpt2");
@@ -54,6 +93,8 @@ for (var i = 0; i < tpt2.length; i++) {
         document.querySelector("#timeline").classList.remove("pt1");
         document.querySelector("#timeline").classList.add("pt2");
         document.querySelector("#timeline").classList.remove("pt3");
+        document.querySelector("#timeline").classList.remove("pt4");
+        document.querySelector("#timeline").classList.remove("pt5");
     });
 }
 var tpt3 = document.querySelectorAll(".tpt3");
@@ -62,6 +103,28 @@ for (var i = 0; i < tpt3.length; i++) {
         document.querySelector("#timeline").classList.remove("pt1");
         document.querySelector("#timeline").classList.remove("pt2");
         document.querySelector("#timeline").classList.add("pt3");
+        document.querySelector("#timeline").classList.remove("pt4");
+        document.querySelector("#timeline").classList.remove("pt5");
+    });
+}
+var tpt3 = document.querySelectorAll(".tpt4");
+for (var i = 0; i < tpt3.length; i++) {
+    tpt3[i].addEventListener("click", () => {
+        document.querySelector("#timeline").classList.remove("pt1");
+        document.querySelector("#timeline").classList.remove("pt2");
+        document.querySelector("#timeline").classList.remove("pt3");
+        document.querySelector("#timeline").classList.add("pt4");
+        document.querySelector("#timeline").classList.remove("pt5");
+    });
+}
+var tpt3 = document.querySelectorAll(".tpt5");
+for (var i = 0; i < tpt3.length; i++) {
+    tpt3[i].addEventListener("click", () => {
+        document.querySelector("#timeline").classList.remove("pt1");
+        document.querySelector("#timeline").classList.remove("pt2");
+        document.querySelector("#timeline").classList.remove("pt3");
+        document.querySelector("#timeline").classList.remove("pt4");
+        document.querySelector("#timeline").classList.add("pt5");
     });
 }
 new Chart("troopsChart", {
