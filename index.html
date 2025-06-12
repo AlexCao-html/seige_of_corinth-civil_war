@@ -20,12 +20,13 @@
             </div>
             <nav>
                 <div class="navCloseContainer">
-                <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" id="close-nav">
-                    <line x1="2" y1="2" x2="22" y2="22" stroke="#000" stroke-width="4" stroke-linecap="round" />
-                    <line x1="2" y1="22" x2="22" y2="2" stroke="#000" stroke-width="4" stroke-linecap="round" />
-                </svg>
+                    <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" id="close-nav">
+                        <line x1="2" y1="2" x2="22" y2="22" stroke="#000" stroke-width="4" stroke-linecap="round" />
+                        <line x1="2" y1="22" x2="22" y2="2" stroke="#000" stroke-width="4" stroke-linecap="round" />
+                    </svg>
                 </div>
                 <ul>
+                    <li id="openOverview" class="opened">Overview</li>
                     <li id="openLeaders">Leaders</li>
                     <li id="openTroops">Troops</li>
                     <li id="openTimeline">Timeline</li>
@@ -34,30 +35,58 @@
             </nav>
         </header>
         <main>
+            <section class="open" id="overview">
+                <h2>Overview</h2>
+                <img src="https://warfarehistorynetwork.com/wp-content/uploads/2024/06/M-Sum24-Corinth-1-2000x1332.jpg" alt="image of the siege of corinth" class="left" />
+                <p>
+                    The siege of Corinth was started on April 29<sup>th</sup>, 1862. It ended on April 30<sup>th</sup>, 1862. Generel Henry Halleck captured the town of Corinth, Mississippi, which had 2 railroads. This was a Union Victory because General P. G. T. Beauregard realized that Henry Halleck's army was really close to Corinth. Because of their disease and lack of water, they surrendered the town without having a big fight. Click on the navigation icon to see more. 
+                </p>
+            </section>
             <section id="leaders">
                 <h2>Leaders</h2>
+                <p class="noTab no SPacing">Click on the names of the Leaders for their military experience</p>
                 <div class="container containerLeaders">
                     <div id="unionLeaders">
                         <h3>Union</h3>
                         <div class="table">
                             <div class="tableHead">Leader</div>
-                            <div class="tableHead">Commanding</div>
+                            <div class="tableHead">Title</div>
                             <div class="tableHead">Troops led</div>
-                            <div class="odd">Henry Halleck</div>
-                            <div class="odd"><i class="ion-checkmark-round"></i></div>
+                            <div class="odd" onclick="document.querySelector('#aboutHenryHalleck').classList.toggle('open')">Henry Halleck</div>
+                            <div class="odd">Major General</div>
                             <div class="odd"></div>
-                            <div class="even">Ulysses S. Grant</div>
-                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="about odd" id="aboutHenryHalleck" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/GenHalleck.jpg/250px-GenHalleck.jpg" alt="portait of Henry Halleck" />
+                                Henry Halleck had 17 years of military experience. He fought in the Mexican-American War. 
+                            </div>
+                            <div class="even" onclick="document.querySelector('#aboutUlyssesSGrant').classList.toggle('open')">Ulysses S. Grant</div>
+                            <div class="even">Major General</div>
                             <div class="even"></div>
-                            <div class="odd">George H. Thomas</div>
-                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="about even" id="aboutUlyssesSGrant" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ulysses_S._Grant_1870-1880.jpg/250px-Ulysses_S._Grant_1870-1880.jpg" alt="portait of Ulysses S. Grant" />
+                                Ulysses S. Grant had 17 years of military experience and fought in the Mexican-American War. 
+                            </div>
+                            <div class="odd" onclick="document.querySelector('#aboutGeorgeHThomas').classList.toggle('open')">George H. Thomas</div>
+                            <div class="odd">Major General</div>
                             <div class="odd">Army of the Tennesse</div>
-                            <div class="even">Don Carlos Buell</div>
-                            <div class="even"><i class="ion-close-round"></i></div>
+                            <div class="about odd" id="aboutGeorgeHThomas" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/George_Henry_Thomas_-_Brady-Handy.jpg/250px-George_Henry_Thomas_-_Brady-Handy.jpg" alt="portait of George H. Thomas" />
+                                George H. Thomas had 22 years of military experience. He fought in the Second Seminole War and the Mexican-American War. 
+                            </div>
+                            <div class="even" onclick="document.querySelector('#aboutDonCarlosBuell').classList.toggle('open')">Don Carlos Buell</div>
+                            <div class="even">Major General</div>
                             <div class="even">Army of the Ohio</div>
-                            <div class="odd">John Pope</div>
-                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="about even" id="aboutDonCarlosBuell" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Don_Carlos_Buell.jpg/250px-Don_Carlos_Buell.jpg" alt="portait of Don Carlos Buell" />
+                                Don Calos Buell had 21 years of military experience. He fought in the Seminole War and Mexican-American War. 
+                            </div>
+                            <div class="odd" onclick="document.querySelector('#aboutJohnPope').classList.toggle('open')">John Pope</div>
+                            <div class="odd">Major General</div>
                             <div class="odd">Army of the Mississippi</div>
+                            <div class="about odd" id="aboutJohnPope" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/GenJohnPope.jpeg/250px-GenJohnPope.jpeg" alt="portait of John Pope" />
+                                John Pope had 20 years of military expeince. He fought in the Second Seminole War and Mexican-American War. 
+                            </div>
                         </div>
                     </div>
                     <div id="confederateLeaders">
@@ -66,24 +95,48 @@
                             <div class="tableHead">Leader</div>
                             <div class="tableHead">Commanding</div>
                             <div class="tableHead">Troops led</div>
-                            <div class="odd">P. G. T. Bearuregard</div>
-                            <div class="odd"><i class="ion-close-round"></i></div>
+                            <div class="odd" onclick="document.querySelector('#aboutPGTBeauregard').classList.toggle('open')">P. G. T. Beauregard</div>
+                            <div class="odd">General</div>
                             <div class="odd"></div>
-                            <div class="even">Braxton Bragg</div>
-                            <div class="even"><i class="ion-close-round"></i></div>
-                            <div class="even">II Corps</div>
-                            <div class="odd">Earl Van Dorn</div>
-                            <div class="odd"><i class="ion-close-round"></i></div>
-                            <div class="odd"></div>
-                            <div class="even">Leonidas Polk</div>
-                            <div class="even"><i class="ion-close-round"></i></div>
-                            <div class="even">I Corps</div>
-                            <div class="odd">William J. Hardee</div>
-                            <div class="odd"><i class="ion-checkmark-round"></i></div>
-                            <div class="odd">III Corps</div>
-                            <div class="even">John C. Breckinridge</div>
-                            <div class="even"><i class="ion-checkmark-round"></i></div>
-                            <div class="even">Reserve Corps</div>
+                            <div class="about odd" id="aboutPGTBeauregard" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Gen._Pierre_Gustave_Toutant_de_Beauregard%2C_C.S.A_-_NARA_-_528596.jpg/250px-Gen._Pierre_Gustave_Toutant_de_Beauregard%2C_C.S.A_-_NARA_-_528596.jpg" alt="portait of P. G. T Beauregard" />
+                                P. G. T. Beauregard has 25 years of military experience and fought in the Mexican-American War. 
+                            </div>
+                            <div class="even" onclick="document.querySelector('#aboutBraxtonBragg').classList.toggle('open')">Braxton Bragg</div>
+                            <div class="even">General</div>
+                            <div class="even">Army of Tennessee</div>
+                            <div class="about even" id="aboutBraxtonBragg" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Braxton_Bragg.jpg/250px-Braxton_Bragg.jpg" alt="portait of Braxton Bragg" />
+                                Braxton Bragg has 26 years of military experience. He fought in the Second Seminole War and the Mexican-American War
+                            </div>
+                            <div class="odd" onclick="document.querySelector('#aboutEarlVanDorn').classList.toggle('open')">Earl Van Dorn</div>
+                            <div class="odd">Major General</div>
+                            <div class="odd">Army of the West</div>
+                            <div class="about odd" id="aboutEarlVanDorn" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gen._Earl_Van_Dorn.jpg/250px-Gen._Earl_Van_Dorn.jpg" alt="portait of Earl Van Dorn" />
+                                Earl Van Dorn has 21 years of military experience. He fought in the Mexican-American War and American Indian Wars
+                            </div>
+                            <div class="even" onclick="document.querySelector('#aboutLeonidasPolk').classList.toggle('open')">Leonidas Polk</div>
+                            <div class="even">Major General</div>
+                            <div class="even">I Corps (Army of Tennessee)</div>
+                            <div class="about even" id="aboutLeonidasPolk" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Portrait_of_General_Leonidas_Polk%2C_C.S.A.jpg/250px-Portrait_of_General_Leonidas_Polk%2C_C.S.A.jpg" alt="portait of Leonidas Polk" />
+                                Leonidas Polk has 3 years of military experience and didn't fight in any wars before the Civil War.
+                            </div>
+                            <div class="odd" onclick="document.querySelector('#aboutWilliamJHardee').classList.toggle('open')">William J. Hardee</div>
+                            <div class="odd">Major General</div>
+                            <div class="odd">III Corps (Army of Tennessee)</div>
+                            <div class="about odd" id="aboutWilliamJHardee" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/William_J._Hardee.jpg/250px-William_J._Hardee.jpg" alt="portait of William J. Hardee" />
+                                William J. Hardee has 25 years of military experience. He fought in the Second Seminole War and Mexican-American War. 
+                            </div>
+                            <div class="even" onclick="document.querySelector('#aboutJohnCBreckinridge').classList.toggle('open')">John C. Breckinridge</div>
+                            <div class="even">Major General</div>
+                            <div class="even">Reserve Corps (Army of Tennessee)</div>
+                            <div class="about even" id="aboutJohnCBreckinridge" onclick="this.classList.toggle('open')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/John_C._Breckinridge_1860_portrait_%283x4_cropped%29.jpg/250px-John_C._Breckinridge_1860_portrait_%283x4_cropped%29.jpg" alt="portait of John C. Breckinridge" />
+                                John C. Breckinridge has 16 years of military experience and fought in the Mexican-American War. 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,6 +146,7 @@
                 <div class="container containerTroops">
                     <div id="unionTroops">
                         <h3>Union</h3>
+                        <p>The long streak of winning battles including the Battle of Forts Jackson and St. Philip, Battle of Shiloh, Battle of Glorieta Pass, Battle of Pea Ridge, Battle of New Madrid, Battle of Fort Donelson, and many more had the Union's morale really high. </p>
                         <div class="list">
                             <div class="odd">Army of Tennessee</div>
                             <div class="even">Army of Ohio</div>
@@ -101,6 +155,7 @@
                     </div>
                     <div id="confederateTroops">
                         <h3>Confederate</h3>
+                        <p>Due to the many recent losses, the Confederate Army's spirits were low. They felt lots of fear and frustation. However, they had determination to defeat the Union army. </p>
                         <div class="list">
                             <div class="odd">Army of Mississippi</div>
                             <div class="even">Army of the West</div>
@@ -118,21 +173,26 @@
             <section id="timeline" class="pt1">
                 <h2>Timeline</h2>
                 <div id="line">
-                    <svg width="20px" height="255vh" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="20px" height="425vh" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="5" cy="42.5vh" r="5" fill="#8080ff" />
                         <circle cx="5" cy="127.5vh" r="5" fill="#8080ff" />
                         <circle cx="5" cy="212.5vh" r="5" fill="#8080ff" />
-                        <line x1="5" y1="42.5vh" x2="5" y2="212.5vh" stroke="#8080ff" stroke-width="3" />
+                        <circle cx="5" cy="297.5vh" r="5" fill="#8080ff" />
+                        <circle cx="5" cy="382.5vh" r="5" fill="#8080ff" />
+                        <line x1="5" y1="42.5vh" x2="5" y2="382.5vh" stroke="#8080ff" stroke-width="3" />
                     </svg>
                 </div>
                 <div class="TimelinePart1">
-                    <h3>4/29/1862</h3>
+                    <h3>Before the battle</h3>
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzP1Y3rLY9FDmme7cCTlbU29eLl280NWHcobthZpbg-ezLUBHEBxmJoXdsAw2ezIbVsgacvC-TmuaVrD89ynSfw5c0071WpKkOGY8ggGGoQ_V_zYE5sauLGL_j9zdDlw-tCGek5AaO_31u/s1600/battle-of-corinth-map-925.jpg" alt="map of the battle" class="left" />
+                    <p>After the many Confederate defeats, General P. G. T. Beauregard sent his army to Corinth and built up the defences and got reinforcements. General Henry W. Halleck got over 100,000 troops from 3 armies at Pittsburg Landing to prepare to go to Corinth. </p>
                     <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineDown tpt2 timelineArrow">
                         <polygon points="2,2 38,2 20,18" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
                     </svg>
                 </div>
                 <div class="TimelinePart2">
-                    <h3>5/3/1862</h3>
+                    <h3>4/29/1862</h3>
+                    <p>Henry Halleck sent over 100,000 men from 3 armies to prepare to move from Pittsburg Landing to Corinth. Halleck moved his army in a very cautious manner in 3 wings to attempt to prevent another surprise attack like the Battle of Shiloh. George H. Thomas commanded the right wing which was the Army of Tennessee. Don Carlos Buell commanded the middle wing which was the Army of Ohio. John Pope commanded the left wing which was the Army of the Mississippi.</p>
                     <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt1 timelineArrow">
                         <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
                     </svg>
@@ -141,8 +201,31 @@
                     </svg>
                 </div>
                 <div class="TimelinePart3">
-                    <h3>5/28/1862</h3>
+                    <h3>5/3/1862</h3>
+                    <img src="https://alchetron.com/cdn/siege-of-corinth-2d4a1166-8d9c-46ca-8443-eb027720198-resize-750.jpg" alt="image of russel's house during the siege of corinth" class="left">
+                    <p>Henry Halleck's army got close to Corinth. The Union and Confederate had lots of combat at Farmington, the Russel House, and the Widow Surratt Farm. Every day, the Union slowly approached Corinth.</p>
                     <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt2 timelineArrow">
+                        <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineDown tpt4 timelineArrow">
+                        <polygon points="2,2 38,2 20,18" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                </div>
+                <div class="TimelinePart4">
+                    <h3>5/28/1862</h3>
+                    <p>Henry Halleck did an attack using his entire force. He ordered George H. Thomas to attack a double log house, which was &lt;1 mi. from the Confederate positions. Don Carlos Buell planned to take control of the Surratt Farm and the hill which overlooked it. After a short fight, Don Carlos Buell took the hill. John pope fought near the Shelton house to his left and maintained their position. Halleck became close enough to bombard the city. </p>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt3 timelineArrow">
+                        <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineDown tpt5 timelineArrow">
+                        <polygon points="2,2 38,2 20,18" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
+                    </svg>
+                </div>
+                <div class="TimelinePart5">
+                    <h3>Aftermath</h3>
+                    <img src="https://etc.usf.edu/clipart/8000/8085/corinth_8085_lg.gif" alt="the evacuation of Corinth" />
+                    <p>On May 29<sup>th</sup>, 1862, P. G. T. Beauregard evacuated Corinth by train. To fool the Union, the Confederate army was told to cheer when a train came to trick the Union into thinking that they were recieving reinforcements. On the morning of May 30<sup>th</sup>, 1862, the Union army found that the Confederate troops left Corinth. </p>
+                    <svg width="40px" height="20px" xmlns="http://www.w3.org/2000/svg" class="timelineUp tpt4 timelineArrow">
                         <polygon points="2,18 38,18 20,2" fill="#a0a0ff" stroke="#6060ff" stroke-width="2"></polygon>
                     </svg>
                 </div>
@@ -153,6 +236,7 @@
                     <li>"Siege of Corinth." American Battlefield Trust, <a href="https://www.battlefields.org/learn/civil-war/battles/siege-corinth">https://www.battlefields.org/learn/civil-war/battles/siege-corinth</a>. Accessed 30 May 2025.</li>
                     <li>Searles, Harry. "Corinth Siege Facts." American History Central, American History Central, 6 Jan. 2025, <a href="https://www.americanhistorycentral.com/entries/siege-of-corinth-facts/">https://www.americanhistorycentral.com/entries/siege-of-corinth-facts/</a>.</li>
                     <li>American Civil War High Command, <a href="https://americancivilwarhighcommand.com/">https://americancivilwarhighcommand.com/</a>. Accessed 6 June 2025. </li>
+                    <li>"Soldier Journal."" Sgtejones, <a href="https://sgtejones.weebly.com/soldier-journal.html">https://sgtejones.weebly.com/soldier-journal.html</a>. Accessed 12 June 2025. </li>
                 </ul>
             </section>
         </main>
