@@ -170,13 +170,13 @@ main h2, main h3 {
 }
 .table .about img {
     transition: all 0.3s ease-in-out;
-    height: 0em;
+    height: 0rem;
 }
 .table .about.open img {
-    height: 12em;
+    height: 12rem;
 }
 .table .about.open {
-    height: 18em;
+    height: calc(6em + 12rem);
     color: #000;
     z-index: initial;
     font-size: 1em;
